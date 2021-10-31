@@ -1,0 +1,55 @@
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+:root {
+    --black: #1e1e1e;
+    --white: #f4f4f4;
+    --primary: #ff5800;
+    --secondary: #2d0901; 
+    --tertier: #bd2401;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: url('../images/FullBackground.png');
+    background-size: cover;
+}
+
+header {
+    height: 64px;
+    position: fixed;
+}
+
+.btn {
+    font-size: 14px;
+    border-radius: 0;
+}
+
+#contact-cta {
+    color: var(--white);
+}
+
+#hero {
+    height: 100vh;
+    position: relative;
+}
+
+#about-gate {
+    height: 80vh;
+}
+
+#project-gate {
+    height: 200vh;
+}
+
+#contact-us {
+    height: 100vh;
+}
