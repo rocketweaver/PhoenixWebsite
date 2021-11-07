@@ -1,9 +1,26 @@
-window.onscroll = function() {scrollFunction()};
+$(function () {
+  $(document).scroll(function () {
+    var $header = $("header");
+    $header.toggleClass('navbar-bg', $(this).scrollTop() > $header.height());
+  });
+});
 
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.querySelector("header").style.background = "linear-gradient(180deg, #2D0901 0%, rgba(45, 9, 1, 0.78) 33.85%, rgba(45, 9, 1, 0) 100%)";
-  } else {
-    document.querySelector("header").style.background = "none";
-  }
-}
+$( document ).ready(function() {
+  let bool = false;
+  $('.hamburger-menu').on('click', function() {
+    if(bool == false) {
+      bool = true;
+      $('.navbar').css('transform', 'translateX(0)');
+      $('.hamburger-menu').fadeOut(function() {
+        $(this).attr('src', '/asset/images/ExitMenu.svg').fadeIn();
+      });
+    } else {
+      bool = false;
+      $('.navbar').css('transform', 'translateX(100%)');
+      $('.hamburger-menu').fadeOut(function() {
+        $(this).attr('src', '/asset/images/HamburgerMenu.svg').fadeIn();
+      });
+    }
+
+  });
+});

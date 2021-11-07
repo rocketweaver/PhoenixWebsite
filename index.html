@@ -4,58 +4,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phoenix | Homepage</title>
+    <title>Phoenix | Home</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="asset/style/style.css">
 </head>
-<body>
+<body id="home-page">
     <header class="container">
         <h1 class="brand-name">Phoenix</h1>
         <nav class="navbar">
             <ul class="nav-list"> 
-                <li class="nav-item"><a href="" target="_blank" class="nav-link">HOME</a></li>
-                <li class="nav-item"><a href="" target="_blank" class="nav-link">ABOUT</a></li>
-                <li class="nav-item"><a href="" target="_blank" class="nav-link">PROJECTS</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li class="nav-item mobile-link"><a href="article.html" class="nav-link">ARTICLE</a></li>
+                <li class="nav-item mobile-link"><a href="microblog.html" class="nav-link">MICROBLOG</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown">PROJECTS</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="article.html" class="dropdown-link">ARTICLE</a></li>
+                        <li class="dropdown-item"><a href="microblog.html" class="dropdown-link">MICROBLOG</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a href="#contact-us" class="nav-link contact-cta br-1">CONTACT</a></li>
             </ul>
         </nav>
+        <img src="/asset/images/HamburgerMenu.svg" alt="Hamburger Menu" class="hamburger-menu">
     </header>
     <main class="container">
-        <div id="jumbotron">
-            <div id="jumbotron-highlight">
-                <img src="asset/images/DefaultLogo.png" alt="Phoenix Logo" id="phoenix-logo" data-tilt>
-                <p id="slogan">"Perseverantia omnia vincit."</p>
+        <section id="jumbotron">
+            <div id="jumbotron-highlight" data-aos="zoom-out">
+                <img src="asset/images/DefaultLogo.svg" alt="Phoenix Logo" id="phoenix-logo" data-tilt>
+                <p id="slogan">
+                    <a href="https://translate.google.com/?sl=la&tl=id&text=perseverantia%20omnia%20vincit&op=translate" target="_blank" rel="noopener noreferrer" id="slogan-desc-link">
+                        "Perseverantia omnia vincit."
+                    </a>
+                </p>
             </div>
-        </div>
+        </section>
 
-        <div id="about-preview">
-            <div class="preview-content">
-                <h2 class="section-title">WHO ARE WE?</h2>
-                <div class="preview-highlight">
-                    <img src="asset/images/iconmonstr-user-29 1.png" alt="" id="users-icon" data-tilt>
-                    <div class="desc-and-link">
-                        <p class="desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nobis ratione reprehenderit praesentium nesciunt, consectetur libero nemo exercitationem cum a 
-                            rerum vel aut tempora dolores minus fugit. Sapiente, hic veritatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi mollitia assumenda, 
-                            totam libero et ipsam voluptates possimus voluptatem! Repellat earum sint aperiam excepturi quaerat quod nostrum quas libero perferendis voluptates.
-                        </p>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-link btn-primary br-1 mt-1">READ MORE</a>
-                    </div>
+        <section id="about-preview">
+            <h2 class="section-title">WHO ARE WE?</h2>
+            <div class="preview-highlight">
+                <img src="asset/images/iconmonstr-user-29 1.svg" alt="" id="users-icon" data-tilt data-aos="fade-right">
+                <div class="desc-and-link" data-aos="fade-left">
+                    <p class="desc">
+                        Phoenix is a team which had been established by total <b>eleven members</b> under the guidence of <b>BNCC</b> that is also known as <b>Bina Nusantara Computer Club</b>.
+                        The team consists of eight freshmen and two mentors from BNCC.
+                    </p>
+                    <a href="about.html" rel="noopener noreferrer" class="btn-link btn-primary br-1 mt-1">READ MORE</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="project-preview">
-    
-        </div>
+        <section id="project-preview">
+            <h2 class="section-title">OUR PROJECTS</h2>
+            <div class="preview-highlight">
+                <div id="article-preview" data-aos="fade-right">
+                    <h3>Article</h3>
+                    <a href="article.html" class="card br-2 mt-1" id="article-card"></a>
+                </div>
+                <div id="microblog-preview">
+                    <h3 data-aos="fade-left">Microblog</h3>
+                    <a href="microblog.html" id="micro-stack" class="mt-1">
+                        <div class="card br-2" id="micro-card-1" data-aos="fade-up-left" data-aos-delay="600"></div>
+                        <div class="card br-2" id="micro-card-2" data-aos="fade-up-left" data-aos-delay="300"></div>
+                        <div class="card br-2" id="micro-card-3" data-aos="fade-left"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <div id="contact-us">
-    
-        </div>
+        <section id="contact-us">
+            <h2 class="section-title"><span>CONTACT</span> <span id="contact-line">US</span></h2>
+            <form action="#" id="contact-form">
+                <input type="text" name="name" placeholder="Input your full name here" id="name" class="input-form">
+                <input type="email" name="email" placeholder="Input your email here, ex: users@gmail.com" class="input-form">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here" class="input-form"></textarea>
+                <button type="submit" class="btn-primary submit-btn">SUBMIT</button>
+            </form>
+        </section>
     </main>
 
-    <footer></footer>
+    <footer class="container">
+        <p class="watermark">&copy;2021, Phoenix. All rights reserved.</p>
+        <div class="icon-list">
+            <img src="asset/images/iconmonstr-instagram-11 1.svg" alt="Instagram" class="socmed-icon">
+            <img src="asset/images/iconmonstr-linkedin-3 1.svg" alt="Linkedin" class="socmed-icon">
+            <img src="asset/images/iconmonstr-whatsapp-1 1.svg" alt="Whatsapp" class="socmed-icon">
+        </div>
+    </footer>
+
+    <!-- Load scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="asset/js/script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500
+        });
+
+        $(document).ready(function(){
+            $("#micro-card-3").mouseover(function(){
+                $(this).stop(true, false).animate({ marginTop: "40px" }, "slow");
+                $("#micro-card-2").stop(true, false).delay(250).animate({ marginTop: "20px" }, "slow");
+                $("#micro-card-1").stop(true, false).delay(500).animate({ marginTop: "10px" }, "slow");
+            });
+
+            $("#micro-card-3").mouseleave(function(){
+                $(this).stop(true, false).animate({ marginTop: "0" }, "slow");
+                $("#micro-card-2").stop(true, false).delay(500).animate({ marginTop: "0" }, "slow");
+                $("#micro-card-1").stop(true, false).delay(1000).animate({ marginTop: "0" }, "slow");
+            });
+
+            $("#article-card").mouseover(function(){
+                $(this).stop(true, false).animate({ marginTop: "40px" }, "slow");
+            });
+
+            $("#article-card").mouseleave(function(){
+                $(this).stop(true, false).animate({ marginTop: "0" }, "slow");
+            });
+        });
+    </script>
 </body>
 </html>

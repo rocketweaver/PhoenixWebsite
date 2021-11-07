@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix | Article</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="asset/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="asset/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="asset/style/style.css">
+</head>
+<body id="article-page">
+    <header class="container navbar-bg">
+        <h1 class="brand-name">Phoenix</h1>
+        <nav class="navbar">
+            <ul class="nav-list"> 
+                <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li class="nav-item mobile-link"><a href="article.html" class="nav-link">ARTICLE</a></li>
+                <li class="nav-item mobile-link"><a href="microblog.html" class="nav-link">MICROBLOG</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">PROJECTS</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="article.html" class="dropdown-link">ARTICLE</a></li>
+                        <li class="dropdown-item"><a href="microblog.html" class="dropdown-link">MICROBLOG</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="index.html" class="nav-link contact-cta br-1">CONTACT</a></li>
+            </ul>
+        </nav>
+        <img src="/asset/images/HamburgerMenu.svg" alt="Hamburger Menu" class="hamburger-menu">
+    </header>
+
+    <main class="container pt-2">
+        <div id="article">
+            <div id="article-list">
+                <a href="articles/windows11.html" target="_blank" class="article-link br-2">
+                    <div class="article-img" id="windows-article"></div>
+                    <div class="article-desc">
+                        <div class="main-desc">
+                            <h3 class="desktop-title">Pakai Aplikasi Android di Windows? Yuk Kita Lihat Fitur-Fitur Windows 11</h3>
+                            <h3 class="mobile-title">Fitur-Fitur Windows 11</h3>
+                            <p> 
+                                Sudah tidak asing lagi untuk para milenial jika mendengar kata Windows, karena Windows merupakan salah satu sistem operasi yang memiliki pengguna terbanyak.
+                                Yuk, <b>klik kotak ini</b> untuk baca artikel lengkapnya!
+                            </p>
+                        </div>
+                        <div class="additional-desc">
+                            <p class="category">Technology</p>
+                            <p class="date">26/11/2021</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="articles/phoneevolution.html" target="_blank" class="article-link br-2 mt-3">
+                    <div class="article-img" id="phonevol-article"></div>
+                    <div class="article-desc">
+                        <div class="main-desc">
+                            <h3>Ponsel Sebesar Kepala? Yuk Intip Perkembangan Ponsel dari Era ke Era!</h3>
+                            <p> 
+                                Sudah menjadi hal yang wajar jika ponsel menjadi gaya hidup semua orang pada zaman ini. Bahkan, kita tidak perlu lagi terkejut bila melihat balita yang sudah 
+                                memiliki ponsel pribadinya. Yuk, <b>klik kotak ini</b> untuk baca artikel lengkapnya!
+                            </p>
+                        </div>
+                        <div class="additional-desc">
+                            <p class="category">Technology</p>
+                            <p class="date">26/11/2021</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p class="watermark">&copy;2021, Phoenix. All rights reserved.</p>
+        <div class="icon-list">
+            <img src="asset/images/iconmonstr-instagram-11 1.svg" alt="Instagram" class="socmed-icon">
+            <img src="asset/images/iconmonstr-linkedin-3 1.svg" alt="Linkedin" class="socmed-icon">
+            <img src="asset/images/iconmonstr-whatsapp-1 1.svg" alt="Whatsapp" class="socmed-icon">
+        </div>
+    </footer>
+
+    <!-- Load scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="asset/slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+        //Responsive Navbar Animation
+        $( document ).ready(function() {
+            let bool = false;
+            $('.hamburger-menu').on('click', function() {
+                if(bool == false) {
+                bool = true;
+                $('.navbar').css('transform', 'translateX(0)');
+                $('.hamburger-menu').fadeOut(function() {
+                    $(this).attr('src', '/asset/images/ExitMenu.svg').fadeIn();
+                });
+                } else {
+                bool = false;
+                $('.navbar').css('transform', 'translateX(100%)');
+                $('.hamburger-menu').fadeOut(function() {
+                    $(this).attr('src', '/asset/images/HamburgerMenu.svg').fadeIn();
+                });
+                }
+
+            });
+        });
+    </script>
+</body>
+</html>
