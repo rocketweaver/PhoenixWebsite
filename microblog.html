@@ -29,7 +29,7 @@
                 <li class="nav-item"><a href="index.html" class="nav-link contact-cta br-1">CONTACT</a></li>
             </ul>
         </nav>
-        <img src="/asset/images/HamburgerMenu.svg" alt="Hamburger Menu" class="hamburger-menu">
+        <img src="asset/images/HamburgerMenu.svg" alt="Hamburger Menu" class="hamburger-menu">
     </header>
 
     <main class="container pt-2">
@@ -72,13 +72,13 @@
                 bool = true;
                 $('.navbar').css('transform', 'translateX(0)');
                 $('.hamburger-menu').fadeOut(function() {
-                    $(this).attr('src', '/asset/images/ExitMenu.svg').fadeIn();
+                    $(this).attr('src', 'asset/images/ExitMenu.svg').fadeIn();
                 });
                 } else {
                 bool = false;
                 $('.navbar').css('transform', 'translateX(100%)');
                 $('.hamburger-menu').fadeOut(function() {
-                    $(this).attr('src', '/asset/images/HamburgerMenu.svg').fadeIn();
+                    $(this).attr('src', 'asset/images/HamburgerMenu.svg').fadeIn();
                 });
                 }
 
@@ -93,6 +93,7 @@
         //Slick
         $('.img-slider').slick({
             dots: true,
+            infinite: false,
             slidesToShow: 3,
             variableWidth: true,
             adaptiveHeight: true,
@@ -100,7 +101,6 @@
                 {
                 breakpoint: 768,
                 settings: {
-                    arrows: false,
                     centerMode: true,
                     centerPadding: '40px',
                     slidesToShow: 3
@@ -109,7 +109,6 @@
                 {
                 breakpoint: 480,
                 settings: {
-                    arrows: false,
                     centerMode: true,
                     centerPadding: '40px',
                     slidesToShow: 1

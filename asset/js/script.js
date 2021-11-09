@@ -12,13 +12,13 @@ $( document ).ready(function() {
       bool = true;
       $('.navbar').css('transform', 'translateX(0)');
       $('.hamburger-menu').fadeOut(function() {
-        $(this).attr('src', '/asset/images/ExitMenu.svg').fadeIn();
+        $(this).attr('src', 'asset/images/ExitMenu.svg').fadeIn();
       });
     } else {
       bool = false;
       $('.navbar').css('transform', 'translateX(100%)');
       $('.hamburger-menu').fadeOut(function() {
-        $(this).attr('src', '/asset/images/HamburgerMenu.svg').fadeIn();
+        $(this).attr('src', 'asset/images/HamburgerMenu.svg').fadeIn();
       });
     }
 

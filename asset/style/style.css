@@ -217,7 +217,7 @@ header {
   transition: background .5s ease-in, color .25s ease-in;
 }
 
-.contact-cta::before, .nav-link::before {
+.contact-cta::before {
   display: none;
 }
 
@@ -376,7 +376,7 @@ header {
   display: block;
   width: 100%;
   height: 100%;
-  background: url("/asset/images/article/Article.svg");
+  background: url("../images/article/Article.svg");
   -webkit-box-shadow: 4px 4px 12px rgba(3, 3, 3, 0.363);
           box-shadow: 4px 4px 12px rgba(3, 3, 3, 0.363);
 }
@@ -412,17 +412,17 @@ header {
 }
 
 #micro-card-1 {
-  background: url("/asset/images/microblog/Slide3.jpg");
+  background: url("../images/microblog/Slide3.jpg");
   background-size: cover;
 }
 
 #micro-card-2 {
-  background: url("/asset/images/microblog/Slide2.jpg");
+  background: url("../images/microblog/Slide2.jpg");
   background-size: cover;
 }
 
 #micro-card-3 {
-  background: url("/asset/images/microblog/Slide1.jpg");
+  background: url("../images/microblog/Slide1.jpg");
   background-size: cover;
 }
 
@@ -607,8 +607,6 @@ footer {
   width: 300px;
   height: 300px;
   margin: 0 40px 0 40px;
-  -webkit-box-shadow: 4px 4px 12px rgba(29, 5, 0, 0.534);
-          box-shadow: 4px 4px 12px rgba(29, 5, 0, 0.534);
   position: relative;
 }
 
@@ -675,19 +673,19 @@ footer {
 }
 
 #microblog-page {
-  background: url("/asset/images/MicroblogBackground.png");
+  background: url("../images/MicroblogBackground.png");
   background-size: cover;
 }
 
 .img-micro {
   height: 400px;
   width: 400px;
-  background: url("/asset/images/microblog/Slide1.jpg");
+  background: url("../images/microblog/Slide1.jpg");
   background-size: cover;
 }
 
 #article-page {
-  background: url("/asset/images/ArticlesBackground.png");
+  background: url("../images/ArticlesBackground.png");
   background-size: cover;
 }
 
@@ -735,12 +733,12 @@ footer {
 }
 
 #windows-article {
-  background: url("/asset/images/article/windows11.jpg");
+  background: url("../images/article/windows11.jpg");
   background-size: cover;
 }
 
 #phonevol-article {
-  background: url("/asset/images/article/phone.jpg");
+  background: url("../images/article/evolutionphone.png");
   background-size: cover;
 }
 
@@ -890,9 +888,6 @@ footer {
   .sub-title {
     padding-right: 8vw;
   }
-  .sub-title h3 {
-    font-size: 16px;
-  }
   .sub-line {
     width: 8vw;
   }
@@ -947,6 +942,9 @@ footer {
   .nav-item:nth-child(4) {
     margin-left: -5px !important;
   }
+  .nav-link::before {
+    display: none;
+  }
   .mobile-link {
     display: block;
   }
@@ -960,7 +958,7 @@ footer {
     display: block;
   }
   #home-page {
-    background: url("/asset/images/MobileBackground.png");
+    background: url("../images/MobileBackground.png");
     background-size: cover;
   }
   .preview-highlight {
@@ -987,6 +985,24 @@ footer {
   #logo-guide {
     width: 100%;
   }
+  footer {
+    height: 120px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer p {
+    text-align: center;
+  }
+  footer .icon-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1005,23 +1021,8 @@ footer {
   #microblog-preview, #article-preview {
     width: 80%;
   }
-  footer {
-    height: 120px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  footer .icon-list {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
   .main-desc h3 {
-    font-size: 18px;
+    font-size: 24px;
   }
   .category, .date {
     font-size: 8px !important;
@@ -1030,8 +1031,16 @@ footer {
     margin-top: 12px;
     margin-left: 10px;
   }
+  .img-micro {
+    width: 300px;
+    height: 300px;
+  }
   .mini-img {
     width: 50% !important;
   }
+}
+
+.slick-dots li button:before, .slick-dots li.slick-active button:before {
+  color: var(--white) !important;
 }
 /*# sourceMappingURL=style.css.map */
